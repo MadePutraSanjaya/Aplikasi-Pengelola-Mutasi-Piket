@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/user.css">
+    <link rel="stylesheet" href="./style/mutasi.css">
 </head> 
 <body>
    <div class="table-top">
-    <p class="font-w-400 text-white">Data User</p>
+    <p class="font-w-400 text-white">Data Mutasi Jaga</p>
     <h1 class="text-dark">
-        USER
+        Mutasi Jaga
     </h1>
    </div>
 
@@ -18,7 +18,7 @@
     <div class="table-action pt-3 d-flex justify-content-between">
         <div class="button-table">
             <button class="btn btn-red mt-5">
-                TAMBAH USER
+                TAMBAH Mutasi Jaga
             </button>
         </div>
         <div class="search-bar mt-5">
@@ -26,15 +26,14 @@
         </div>
     </div>
     <div class="table-main mt-5">
-        <h2 class="text-dark font-w-6">Manajemen Data User</h2>
+        <h2 class="text-dark font-w-6">Manajemen Data Mutasi Jaga</h2>
    <table class="table  table-hover mt-4">
   <thead class="text-white">
     <tr>
       <th class=" font-w-5" scope="col">ID</th>
-      <th class=" font-w-5" scope="col">Name</th>
-      <th class=" font-w-5" scope="col">Username</th>
-      <th class=" font-w-5" scope="col">Password</th>
-      <th class=" font-w-5" scope="col">Roles</th>
+      <th class=" font-w-5" scope="col">Petugas Penanggung Jawab</th>
+      <th class=" font-w-5" scope="col">Hari</th>
+      <th class=" font-w-5" scope="col">Tanggal</th>
       <th class=" font-w-5" scope="col">Status</th>
       <th class=" font-w-5" scope="col">Aksi</th>
     </tr>
@@ -46,8 +45,6 @@
       <td>Otto</td>
       <td>@mdo</td>
       <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
     </tr>
     <tr>
       <th scope="row">2</th>
@@ -55,15 +52,11 @@
       <td>Otto</td>
       <td>@mdo</td>
       <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Mark</td>
       <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
       <td>@mdo</td>
       <td>@mdo</td>
     </tr>

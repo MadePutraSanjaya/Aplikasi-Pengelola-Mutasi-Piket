@@ -53,21 +53,21 @@
               <i class="bx bx-user nav_icon"></i>
               <span class="nav_name">Users</span>
             </a>
-            <a href="#" class="nav_link text-white">
+            <a href="index.php?pages=personil" class="nav_link text-white">
               <i class="bx bx-message-square-detail nav_icon"></i>
-              <span class="nav_name">Messages</span>
+              <span class="nav_name">Personil</span>
             </a>
-            <a href="#" class="nav_link text-white">
+            <a href="index.php?pages=barang" class="nav_link text-white">
               <i class="bx bx-bookmark nav_icon"></i>
-              <span class="nav_name">Bookmark</span>
+              <span class="nav_name">Barang</span>
             </a>
-            <a href="#" class="nav_link text-white">
+            <a href="index.php?pages=mutasi-jaga" class="nav_link text-white">
               <i class="bx bx-folder nav_icon"></i>
-              <span class="nav_name">Files</span>
+              <span class="nav_name">Mutasi Jaga</span>
             </a>
-            <a href="#" class="nav_link text-white">
+            <a href="index.php?pages=mutasi-jaga-edit" class="nav_link text-white">
               <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
-              <span class="nav_name">Stats</span>
+              <span class="nav_name">Mutasi Jaga Edit</span>
             </a>
           </div>
         </div>
@@ -90,12 +90,18 @@
                 case 'user':
                     include './pages/user.php';
                     break;
-                case 'layanan':
-                    include 'layanan.php';
+                case 'personil':
+                    include './pages/personil.php';
                     break;
-                case 'kontak':
-                    include 'kontak.php';
+                case 'barang':
+                    include './pages/barang.php';
                     break;
+                    case 'mutasi-jaga':
+                      include './pages/mutasi_jaga.php';
+                      break;
+                      case 'mutasi-jaga-edit':
+                        include './pages/mutasi_jaga_detail.php';
+                        break;
                 default:
                     echo 'Halaman tidak ditemukan.';
             }
