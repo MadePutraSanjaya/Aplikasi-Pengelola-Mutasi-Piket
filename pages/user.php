@@ -87,7 +87,7 @@
                           $query_edit = mysqli_query($conn,"SELECT tb_user.*, tb_personil.nama_personil FROM tb_user, tb_personil WHERE tb_user.id_personil=tb_personil.id_personil AND tb_user.id_user='$id'");
                           while ($row = mysqli_fetch_array($query_edit)) {  
                         ?>
-
+                        <input type="hidden" name="action" value="updateUser">
                         <input type="hidden" name="id_user" value="<?php echo $row['id_user']; ?>">
 
                         <div class="form-group">
@@ -146,6 +146,7 @@
                   </div>
                   <div class="modal-body">
                     <form role="form" action="action/tambah.php" method="post">
+                    <input type="hidden" name="action" value="createUser">
 
                         <div class="form-group">   
                           <label>Personil</label>
