@@ -1,3 +1,20 @@
+ <?php
+    include "koneksi.php";
+     $sql_query = "SELECT * FROM TB_USER";
+
+       if ($result = $conn ->query($sql_query)) {
+                            while ($row = $result -> fetch_assoc()) { 
+                                $user = $row['ID_USER'];
+                                $personil = $row['ID_PERSONIL'];
+                                $username = $row['USERNAME'];
+                                $password = $row['PASSWORD'];
+                                $level = $row['LEVEL'];
+                                $status = $row['STATUS_USER'];
+                            }
+                          }
+    
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +34,9 @@
    <div class="table-top">
     <div class="table-action pt-3 d-flex justify-content-between">
         <div class="button-table">
-            <button class="btn btn-red mt-5">
+            <a class="btn btn-red mt-5" href="action/tambah.php">
                 TAMBAH USER
-            </button>
+            </a>
         </div>
         <div class="search-bar mt-5">
             <input class="text-white font-w-6" type="text" placeholder="Search">
@@ -41,32 +58,21 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+      <td><?php echo $user; ?></td>
+      <td><?php echo $personil; ?></td>
+      <td><?php echo $username; ?></td>
+      <td><?php echo $password; ?></td>
+      <td><?php echo $level; ?></td>
+      <td><?php echo $status; ?></td>
+      <td>
+        <div class="button-aksi d-flex justify-content-between">
+          <button>Edit</button>
+          <button>Hapus</button>
+        </div>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
+    
+    
   </tbody>
 </table>
     </div>

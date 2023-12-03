@@ -19,6 +19,8 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
     />
+
+    <!-- Script -->
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./style/style.css" />
