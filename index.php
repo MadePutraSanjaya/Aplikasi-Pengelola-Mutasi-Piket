@@ -108,7 +108,7 @@
                     echo 'Halaman tidak ditemukan.';
             }
         } else {
-            include 'te.php';
+            // include 'te.php';
         }
         ?>
       </div>
