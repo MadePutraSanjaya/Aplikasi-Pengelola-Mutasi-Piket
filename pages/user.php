@@ -10,10 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/user.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head> 
 <body>
    <div class="table-top">
@@ -79,7 +75,6 @@
         <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog">
               
-                <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header">
                     <h4 class="modal-title">Tambah data user</h4>
@@ -164,7 +159,6 @@
                 
               </div>
             </div>
-
    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 </body>
 </html>
