@@ -43,7 +43,7 @@
                           <label>ID</label>
                           <input type="text" name="id_user" class="form-control" value="">    
                           <label>ID Personil</label>
-                          <input type="email" name="id_personil" class="form-control" value="">   
+                          <input type="text" name="id_personil" class="form-control" value="">   
                         </div>
                         
                         <div class="modal-footer">  
