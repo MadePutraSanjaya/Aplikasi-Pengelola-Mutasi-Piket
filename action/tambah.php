@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['error'] = "Data siswa gagal ditambahkan.";
     header('Location: ../index.php?pages=user');
   }
-}
+} 
 
   // include_once('header.php');
 
