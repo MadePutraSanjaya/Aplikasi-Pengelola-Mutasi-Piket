@@ -14,36 +14,55 @@
    <div class="table-top">
     <p class="font-w-400 text-white">Data User</p>
     <h1 class="text-dark">
-        USER
+        User
     </h1>
    </div>
 
    <div class="table-top">
     <div class="table-action pt-3 d-flex justify-content-between">
-        <div class="button-table ">
-          <a href="#" type="button" class="btn-md btn btn-red mt-5" data-toggle="modal" data-target="#myModal">TAMBAH USER</a>
+        <div class="button-table">
+          <a href="#" type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">Tambah User</a>
         </div>
         <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog">
               
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Update Data Mahasiswa</h4>
+                    <h4 class="modal-title">Tambah data user</h4>
                   </div>
                   <div class="modal-body">
                     <form role="form" action="action/tambah.php" method="post">
 
-                        <div class="form-group">
-                          <label>ID</label>
-                          <input type="text" name="id_user" class="form-control" value="">    
-                          <label>ID Personil</label>
-                          <input type="text" name="id_personil" class="form-control" value="">   
+                        <div class="form-group">   
+                          <label>Personil</label>
+                          <select name="personil" id="personil" class="form-control">
+                              <option disabled selected> Pilih Personil </option>
+                              <?php 
+                                $sql=mysqli_query($conn,"SELECT * FROM tb_personil where ID_PERSONIL NOT IN (SELECT ID_PERSONIL FROM tb_USER) and STATUS_PERSONIL <> '0'");
+                                while ($data=mysqli_fetch_array($sql)) {
+                              ?>
+                                <option value="<?=$data['ID_PERSONIL']?>"><?=$data['NAMA_PERSONIL']?></option> 
+                              <?php
+                                }
+                              ?>
+                          </select>
+                          
+                          <label>Username</label>
+                          <input type="text" name="username" class="form-control" value="">  
+                          
+                          <label>Password</label>
+                          <input type="password" name="password" class="form-control" value="">
+                          
+                          <label>Role</label>
+                          <select name="level" id="level"  class="form-control">
+                            <option value="admin">Admin</option>
+                            <option value="petugas">Petugas</option>
+                          </select>        
                         </div>
                         
                         <div class="modal-footer">  
-                          <button type="submit" name="submit" class="btn btn-success">SIMPAN</button>
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" name="submit" class="btn btn-success">Simpan Data</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
                         </div>       
                       </form>
                   </div>
@@ -85,6 +104,9 @@
               <td><?php echo $data['password']; ?></td>
               <td><?php echo $data['level']; ?></td>
               <td><?php echo $data['status_user']; ?></td>
+              <td>
+                <a href="#" type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#ModalEdit">Edit</a>
+              </td>
             </tr>
 
           <?php               
