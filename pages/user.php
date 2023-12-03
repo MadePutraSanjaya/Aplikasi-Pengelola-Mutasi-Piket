@@ -18,7 +18,7 @@
    <div class="table-top">
     <p class="font-w-400 text-white">Data User</p>
     <h1 class="text-dark">
-        USER
+        User
     </h1>
    </div>
 
@@ -33,8 +33,7 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Update Data Mahasiswa</h4>
+                    <h4 class="modal-title">Tambah data user</h4>
                   </div>
                   <div class="modal-body">
                     <form role="form" action="action/tambah.php" method="post">
