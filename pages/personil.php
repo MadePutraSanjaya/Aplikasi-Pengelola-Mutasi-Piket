@@ -1,3 +1,7 @@
+ <?php
+    include "koneksi.php";
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,16 +37,16 @@
 
                         <div class="form-group">
                           <label>ID Personil</label>
-                          <input type="number" name="id_personil" class="form-control" value="">   
+                          <input type="text" name="id_personil" class="form-control" value="">   
 
                           <label>Nama Personil</label>
                           <input type="text" name="nama_personil" class="form-control" value="">   
 
                             <label>Pangkat Personil</label>
-                          <input type="text" name="nama_personil" class="form-control" value="">   
+                          <input type="text" name="pangkat_personil" class="form-control" value="">   
                            
                           <label>NRP Personil</label>
-                          <input type="number" name="nrp_personil" class="form-control" value="">   
+                          <input type="text" name="nrp_personil" class="form-control" value="">   
 
                            <label>Status Personil</label>
                           <select name="status_personil" id="status_personil">
@@ -53,7 +57,7 @@
                         </div>
                         
                         <div class="modal-footer">  
-                          <button type="submit" name="submit" class="btn btn-success">SIMPAN</button>
+                          <button type="submit" name="submitPersonil" class="btn btn-success">SIMPAN</button>
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>       
                       </form>
@@ -81,30 +85,28 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
+              <?php 
+    include "koneksi.php";
+
+          $query = mysqli_query($conn,"SELECT * FROM tb_personil");
+          // $query = mysqli_query($conn,"SELECT id_user,tb_personil.nama_personil,username,password,level,status_user 
+          //           FROM tb_user,tb_personil
+          //           WHERE tb_user.id_personil=tb_personil.id_personil");
+          while ($data = mysqli_fetch_assoc($query)) 
+          {
+          ?>
+            <tr>
+              <td><?php echo $data['ID_PERSONIL']; ?></td>
+              <td><?php echo $data['NAMA_PERSONIL']; ?></td>
+              <td><?php echo $data['PANGKAT_PERSONIL']; ?></td>
+              <td><?php echo $data['NRP_PERSONIL']; ?></td>
+              <td><?php echo $data['STATUS_PERSONIL']; ?></td>
+            
+            </tr>
+          <?php               
+          } 
+          ?>
+                    
   </tbody>
 </table>
     </div>
