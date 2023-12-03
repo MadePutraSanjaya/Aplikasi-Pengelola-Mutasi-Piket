@@ -6,4 +6,3 @@ $password = "";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 ?>
-<!-- ini coba -->
