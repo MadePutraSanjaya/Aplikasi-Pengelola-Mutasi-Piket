@@ -1,4 +1,6 @@
 <?php 
+
+// user
     include('../koneksi.php');
 if (isset($_POST['submit'])) {
   $user = $_POST['id_user'];
@@ -19,5 +21,9 @@ if (isset($_POST['submit'])) {
     header('Location: ../index.php?pages=user');
   }
 }
+
+
+// personil
+
 
  ?>

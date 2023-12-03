@@ -9,10 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/user.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head> 
 <body>
    <div class="table-top">
@@ -24,13 +20,12 @@
 
    <div class="table-top">
     <div class="table-action pt-3 d-flex justify-content-between">
-        <div class="button-table">
-          <a href="#" type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">TAMBAH USER</a>
+        <div class="button-table ">
+          <a href="#" type="button" class="btn-md btn btn-red mt-5" data-toggle="modal" data-target="#myModal">TAMBAH USER</a>
         </div>
         <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog">
               
-                <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -97,6 +92,5 @@
 </table>
     </div>
    </div>
-   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 </body>
 </html>
