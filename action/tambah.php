@@ -1,23 +1,23 @@
 <?php 
     include('../koneksi.php');
+if ($_POST['personil'] == NULL){
+  header('Location: ../index.php?pages=user');
+}else{
 if (isset($_POST['submit'])) {
-  $user = $_POST['id_user'];
-  $personil = $_POST['id_personil'];
-  // $username = $_POST['username'];
-  // $password = $_POST['password'];
-  // $level = $_POST['level'];
-  // $status = $_POST['status'];
+  $personil = $_POST['personil'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $level = $_POST['level'];
 
-  $query = "INSERT INTO tb_user (ID_USER,ID_PERSONIL) VALUES ('$user','$personil')";
+  $query = "INSERT INTO tb_user (ID_PERSONIL,USERNAME,PASSWORD,LEVEL,STATUS_USER) 
+            VALUES ('$personil','$username','$password','$level','1')";
   $result = mysqli_query($conn, $query);
 
   if ($result) {
-    $_SESSION['success'] = "Data siswa berhasil ditambahkan.";
     header('Location: ../index.php?pages=user');
   } else {
-    $_SESSION['error'] = "Data siswa gagal ditambahkan.";
     header('Location: ../index.php?pages=user');
   }
 }
-
+}
  ?>
