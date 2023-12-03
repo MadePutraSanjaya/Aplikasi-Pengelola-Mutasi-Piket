@@ -77,17 +77,19 @@
   </thead>
   <tbody>
           <?php 
-          $query = mysqli_query($conn,"SELECT * FROM tb_user");
+          $query = mysqli_query($conn,"SELECT id_user,tb_personil.nama_personil,username,password,level,status_user 
+                    FROM tb_user,tb_personil
+                    WHERE tb_user.id_personil=tb_personil.id_personil");
           while ($data = mysqli_fetch_assoc($query)) 
           {
           ?>
             <tr>
-              <td><?php echo $data['ID_USER']; ?></td>
-              <td><?php echo $data['ID_PERSONIL']; ?></td>
-              <td><?php echo $data['USERNAME']; ?></td>
-              <td><?php echo $data['PASSWORD']; ?></td>
-              <td><?php echo $data['LEVEL']; ?></td>
-              <td><?php echo $data['STATUS_USER']; ?></td>
+              <td><?php echo $data['id_user']; ?></td>
+              <td><?php echo $data['nama_personil']; ?></td>
+              <td><?php echo $data['username']; ?></td>
+              <td><?php echo $data['password']; ?></td>
+              <td><?php echo $data['level']; ?></td>
+              <td><?php echo $data['status_user']; ?></td>
             </tr>
 
           <?php               
